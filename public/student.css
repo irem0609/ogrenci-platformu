@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+
+/* SOL SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 220px;
+    height: 100vh;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-title {
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+}
+
+
+/* ANA İÇERİK */
+
+.main-content {
+    margin-left: 220px;
+    padding: 30px;
+}
