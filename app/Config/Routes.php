@@ -47,14 +47,13 @@ $routes->post(
     'Library::add',
     ['filter' => 'auth']
 );
+$routes->post(
+    '/student/library/update',
+    'Library::updateBook',
+     ['filter' => 'auth']
+ );
 
 
-// STUDENT PLANNER
-$routes->get(
-    '/student/planner',
-    'Student::planner',
-    ['filter' => 'auth']
-);
 
 
 // STUDENT CHATBOT
@@ -63,11 +62,78 @@ $routes->get(
     'Student::chatbot',
     ['filter' => 'auth']
 );
-
+$routes->post(
+    '/student/chatbot/send',
+    'Student::sendChatMessage', 
+    ['filter' => 'auth']
+);
 
 // STUDENT PROFILE
 $routes->get(
     '/student/profile',
     'Student::profile',
+    ['filter' => 'auth']
+);
+$routes->post(
+    '/student/profile/update-email',
+    'Student::updateEmail',
+    ['filter' => 'auth']
+);
+$routes->post(
+    '/student/profile/update-password',
+    'Student::updatePassword',
+    ['filter' => 'auth']
+);
+
+// STUDENT PLANNER
+
+$routes->get(
+    '/student/planner',
+    'Planner::index',
+    ['filter' => 'auth']
+);
+$routes->get(
+    '/student/planner/add-event',
+    'Planner::showAddEvent',
+    ['filter' => 'auth']
+);
+
+$routes->post(
+    '/student/planner/add-event',
+    'Planner::addEvent',
+    ['filter' => 'auth']
+);
+
+$routes->get(
+    '/student/planner/toggle-event/(:num)',
+    'Planner::toggleEvent/$1',
+    ['filter' => 'auth']
+);
+
+$routes->get(
+    '/student/planner/delete-event/(:num)',
+    'Planner::deleteEvent/$1',
+    ['filter' => 'auth']
+);
+$routes->get(
+    '/student/planner/add-reminder',
+    'Planner::showAddReminder',
+    ['filter' => 'auth']
+);
+$routes->post(
+    '/student/planner/add-reminder',
+    'Planner::addReminder',
+    ['filter' => 'auth']
+);
+
+$routes->get(
+    '/student/planner/toggle-reminder/(:num)',
+    'Planner::toggleReminder/$1',
+    ['filter' => 'auth']
+);
+
+$routes->get(
+    '/student/planner/delete-reminder/(:num)',
+    'Planner::deleteReminder/$1',
     ['filter' => 'auth']
 );

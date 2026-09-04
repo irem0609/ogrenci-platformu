@@ -43,3 +43,4228 @@ body {
     margin-left: 220px;
     padding: 30px;
 }
+/* ========================= */
+/* PLANNER ANA YAPISI */
+/* ========================= */
+
+.planner-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ========================= */
+/* HAFTALIK PLANLAYICI */
+/* ========================= */
+
+.planner-section {
+    min-width: 0;
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* ========================= */
+/* SAĞ PANEL */
+/* ========================= */
+
+.planner-right {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* TAKVİM */
+
+.calendar-section {
+    width: 100%;
+}
+
+
+/* DON'T FORGET */
+
+.dont-forget-section {
+    width: 100%;
+}
+/* ========================= */
+/* TAKVİM */
+/* ========================= */
+
+.calendar-header {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays {
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.calendar-grid {
+    gap: 5px;
+}
+
+.calendar-day {
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.calendar-day:hover {
+    background: #f0f0f0;
+}
+
+.calendar-day.today {
+    font-weight: bold;
+    border: 2px solid #333;
+}
+
+.calendar-day.empty {
+    border: none;
+}
+/* ========================= */
+/* TAKVİM BAŞLIK */
+/* ========================= */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.calendar-header a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* ========================= */
+/* YAKINDA */
+/* ========================= */
+
+.upcoming-section {
+    margin-top: 25px;
+}
+
+.upcoming-event {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 4px solid green;
+}
+
+.upcoming-event strong {
+    color: green;
+}
+
+.upcoming-event p {
+    margin: 5px 0;
+}
+/* ============================= */
+/* CHATBOT */
+/* ============================= */
+
+.chatbot-page {
+    max-width: 900px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CHATBOT HEADER */
+
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chatbot-avatar {
+    font-size: 45px;
+}
+
+.chatbot-header h1 {
+    margin: 0;
+}
+
+.chatbot-header p {
+    margin: 5px 0 0;
+}
+
+
+/* MESAJLAR */
+
+.chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+
+/* MESAJ */
+
+.chat-message {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    max-width: 75%;
+}
+
+.bot-message {
+    margin-right: auto;
+}
+
+.user-message {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+
+.message-avatar {
+    font-size: 25px;
+    min-width: 35px;
+}
+
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 15px;
+    background: #f2f2f2;
+}
+
+
+.user-message .message-content {
+    background: #e8f0ff;
+}
+
+
+.message-content strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.message-content p {
+    margin: 0;
+}
+
+
+/* MESAJ GİRİŞİ */
+
+.chatbot-input-area {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+
+.chatbot-input-area input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.chatbot-input-area input:focus {
+    border-color: #777;
+}
+
+
+.chatbot-input-area button {
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* ========================================= */
+/* KÜTÜPHANE */
+/* ========================================= */
+
+.library-page {
+    overflow-x: hidden;
+}
+
+
+/* ================================ */
+/* SAKURA YAPRAKLARI */
+/* ================================ */
+
+.sakura-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 20;
+}
+
+
+.sakura-container span {
+    position: absolute;
+    top: -60px;
+    font-size: 20px;
+    opacity: 0.8;
+    animation: sakuraFall linear infinite;
+}
+
+
+.sakura-container span:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+}
+
+
+.sakura-container span:nth-child(2) {
+    left: 25%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+
+.sakura-container span:nth-child(3) {
+    left: 40%;
+    animation-duration: 13s;
+    animation-delay: 5s;
+}
+
+
+.sakura-container span:nth-child(4) {
+    left: 55%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+
+.sakura-container span:nth-child(5) {
+    left: 68%;
+    animation-duration: 14s;
+    animation-delay: 7s;
+}
+
+
+.sakura-container span:nth-child(6) {
+    left: 78%;
+    animation-duration: 17s;
+    animation-delay: 4s;
+}
+
+
+.sakura-container span:nth-child(7) {
+    left: 88%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+
+.sakura-container span:nth-child(8) {
+    left: 95%;
+    animation-duration: 19s;
+    animation-delay: 8s;
+}
+
+
+@keyframes sakuraFall {
+
+    0% {
+        transform:
+            translateY(-50px)
+            translateX(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(70px)
+            rotate(180deg);
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(-50px)
+            rotate(360deg);
+    }
+
+}
+
+
+/* ================================ */
+/* KÜTÜPHANE BAŞLIK */
+/* ================================ */
+
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+.library-eyebrow {
+    margin: 0 0 6px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+
+.library-header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+
+.library-description {
+    margin: 8px 0 0;
+    opacity: 0.7;
+}
+
+
+.library-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #eee0ef;
+    color: #5b2868;
+    transition: 0.2s ease;
+}
+/* ========================================= */
+/* SAKURA KÜTÜPHANE ARKA PLANI */
+/* ========================================= */
+
+/* ========================================= */
+/* 🌸 SAKURA - MASALSI ARKA PLAN */
+/* ========================================= */
+
+.library-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 255, 255, 0.55),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(255, 190, 210, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255, 220, 225, 0.4),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #efd1d9 0%,
+            #e8c2cd 45%,
+            #f2d6dc 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================= */
+/* 🌸 HAFİF SAKURA DOKUSU */
+/* ========================================= */
+
+.library-page::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0.16;
+
+    background-image:
+
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,255,255,0.8) 0 2px,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            circle at 70% 20%,
+            rgba(255,255,255,0.6) 0 1.5px,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            circle at 40% 75%,
+            rgba(180,100,130,0.25) 0 2px,
+            transparent 4px
+        );
+
+    background-size:
+        90px 90px,
+        130px 130px,
+        170px 170px;
+
+    mix-blend-mode: multiply;
+}
+
+
+/* ANA İÇERİK DOKUNUN ÜSTÜNDE KALSIN */
+
+.library-page .main-content {
+    position: relative;
+    z-index: 1;
+
+    background: transparent;
+}
+
+
+.library-page .main-content {
+    background: transparent;
+}
+
+
+.library-add-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ================================ */
+/* ARAMA */
+/* ================================ */
+
+.library-tools {
+    margin-bottom: 30px;
+}
+
+
+.library-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+
+.library-search input {
+    flex: 1;
+    max-width: 500px;
+    padding: 13px 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+
+.library-search input:focus {
+    border-color: #a86ab5;
+}
+
+
+.library-search button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #eee0ef;
+    color: #5b2868;
+    font-weight: bold;
+}
+
+
+/* ================================ */
+/* FİLTRELER */
+/* ================================ */
+
+.library-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.library-filters a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    background: #f3f3f3;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+
+.library-filters a:hover,
+.library-filters a.active {
+    background: #ead5ed;
+    color: #5b2868;
+}
+
+
+/* ================================ */
+/* GERÇEK KÜTÜPHANE */
+/* ================================ */
+
+.real-library {
+    position: relative;
+    min-height: 560px;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 45px;
+    background:
+        linear-gradient(
+            rgba(54, 34, 49, 0.08),
+            rgba(54, 34, 49, 0.08)
+        ),
+        #f5e9df;
+    box-shadow:
+        inset 0 0 80px rgba(90, 45, 50, 0.08),
+        0 20px 50px rgba(50, 30, 40, 0.12);
+}
+
+
+/* ================================ */
+/* KÜTÜPHANE DUVARI */
+/* ================================ */
+
+.library-wall {
+    min-height: 470px;
+    padding: 30px 25px 50px;
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08),
+            transparent 20%,
+            transparent 80%,
+            rgba(0,0,0,0.08)
+        ),
+        #6d493c;
+    box-shadow:
+        inset 0 0 50px rgba(0,0,0,0.2);
+}
+
+
+/* ================================ */
+/* RAF */
+/* ================================ */
+
+.library-shelf {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+
+.books-row {
+    min-height: 190px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 0 25px 18px;
+}
+
+
+/* ================================ */
+/* KİTAP */
+/* ================================ */
+
+.library-book {
+    position: relative;
+    width: 58px;
+    height: 175px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 8px;
+
+    border: none;
+    border-radius: 4px 5px 3px 2px;
+
+    color: white;
+    cursor: pointer;
+
+    box-shadow:
+        3px 4px 5px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.library-book:hover {
+    transform:
+        translateY(-15px)
+        rotate(-2deg);
+
+    box-shadow:
+        7px 12px 15px rgba(0,0,0,0.35);
+
+    z-index: 5;
+}
+
+
+.library-book:focus {
+    outline: 3px solid rgba(255,255,255,0.7);
+}
+
+
+/* KİTAP RENKLERİ */
+
+.library-book.purple {
+    background: #4d315c;
+}
+
+
+.library-book.pink {
+    background: #8c4c68;
+}
+
+
+.library-book.blue {
+    background: #344d69;
+}
+
+
+.library-book.burgundy {
+    background: #642f3b;
+}
+
+
+.library-book.green {
+    background: #405b4d;
+}
+
+
+.library-book.brown {
+    background: #664631;
+}
+
+
+/* ================================ */
+/* KİTAP YAZILARI */
+/* ================================ */
+
+.book-spine-decoration {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+.book-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    max-height: 105px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    letter-spacing: 0.5px;
+}
+
+
+.book-author {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    font-size: 8px;
+    opacity: 0.75;
+
+    max-height: 30px;
+    overflow: hidden;
+}
+
+
+.book-spine-line {
+    width: 75%;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+}
+
+
+/* ================================ */
+/* RAF TAHTASI */
+/* ================================ */
+
+.shelf-board {
+    height: 24px;
+
+    margin: 0 5px;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #8a5d49,
+            #553628
+        );
+
+    box-shadow:
+        0 8px 10px rgba(0,0,0,0.3);
+}
+
+
+/* ================================ */
+/* BOŞ KÜTÜPHANE */
+/* ================================ */
+
+.empty-library {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.empty-library-icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+
+.empty-library h2 {
+    margin: 0 0 8px;
+}
+
+
+.empty-library p {
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+
+/* ================================ */
+/* KİTAP DETAY MODALI */
+/* ================================ */
+
+.book-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(25, 15, 30, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.25s ease;
+
+    z-index: 100;
+}
+
+
+.book-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.book-modal-content {
+    position: relative;
+
+    width: min(420px, calc(100% - 40px));
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: #fff9fc;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.3);
+
+    text-align: center;
+
+    transform: translateY(15px) scale(0.96);
+
+    transition: 0.25s ease;
+}
+
+
+.book-modal.show .book-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+.book-modal-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f1e3ed;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+.book-modal-icon {
+    font-size: 55px;
+}
+
+
+.book-modal-label {
+    margin: 10px 0 5px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #8c5c91;
+}
+
+
+.book-modal-content h2 {
+    margin: 5px 0;
+}
+
+
+.book-modal-content > p {
+    opacity: 0.7;
+}
+
+
+.book-modal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.book-modal-info div {
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: #f6edf4;
+}
+
+
+.book-modal-info span {
+    display: block;
+
+    font-size: 12px;
+
+    opacity: 0.6;
+
+    margin-bottom: 5px;
+}
+
+
+.book-modal-info strong {
+    font-size: 14px;
+}
+
+
+/* ================================ */
+/* MOBİL */
+/* ================================ */
+
+@media (max-width: 800px) {
+
+    .library-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .real-library {
+        padding: 20px;
+    }
+
+
+    .library-wall {
+        padding: 20px 10px 40px;
+        overflow-x: auto;
+    }
+
+
+    .books-row {
+        width: max-content;
+    }
+/* ========================================= */
+/* KİTAP GÜNCELLEME */
+/* ========================================= */
+
+.book-update-form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+
+.book-update-form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.page-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.page-input input {
+    width: 100px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+
+.page-input span {
+    opacity: 0.7;
+}
+
+
+.book-update-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-size: 15px;
+}
+
+
+.favorite-option {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.favorite-option input {
+    width: 18px;
+    height: 18px;
+}
+
+
+.book-save-button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #ead5ed;
+    color: #5b2868;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.book-save-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.book-update-message {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+
+.book-update-message.success {
+    color: #3c7951;
+    font-weight: bold;
+}
+/* ========================================= */
+/* TEMA ALTYAPISI */
+/* ========================================= */
+
+.sidebar {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.sidebar > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ========================================= */
+/* SAKURA SIDEBAR */
+/* ========================================= */
+
+.sidebar[data-theme="sakura"] {
+    background: #fff8fb;
+}
+
+
+.sidebar[data-theme="sakura"] .sidebar-title {
+    color: #5b2868;
+}
+
+
+.sidebar[data-theme="sakura"] nav a:hover,
+.sidebar[data-theme="sakura"] .sidebar-bottom a:hover {
+    background: #f7dceb;
+    color: #7b3d82;
+}
+
+
+/* ========================================= */
+/* DARK SIDEBAR */
+/* ========================================= */
+
+.sidebar[data-theme="dark"] {
+    background: #151323;
+    color: #eee8ff;
+}
+
+
+.sidebar[data-theme="dark"] .sidebar-title {
+    color: #d8b8ff;
+}
+
+
+.sidebar[data-theme="dark"] nav a,
+.sidebar[data-theme="dark"] .sidebar-bottom a {
+    color: #eee8ff;
+}
+
+
+.sidebar[data-theme="dark"] nav a:hover,
+.sidebar[data-theme="dark"] .sidebar-bottom a:hover {
+    background: #302448;
+    color: #ffffff;
+}
+
+
+/* ========================================= */
+/* OCEAN SIDEBAR */
+/* ========================================= */
+
+.sidebar[data-theme="ocean"] {
+    background: #eaf8fc;
+}
+
+
+.sidebar[data-theme="ocean"] .sidebar-title {
+    color: #17627a;
+}
+
+
+.sidebar[data-theme="ocean"] nav a:hover,
+.sidebar[data-theme="ocean"] .sidebar-bottom a:hover {
+    background: #c9edf5;
+    color: #12647b;
+}
+
+
+/* ========================================= */
+/* TEMA DEKORASYON ALANI */
+/* ========================================= */
+
+.sidebar-theme-decoration {
+    position: absolute !important;
+    inset: auto 0 0 0;
+    height: 120px;
+    z-index: 1 !important;
+    pointer-events: none;
+}
+
+
+/* SAKURA */
+
+.sidebar[data-theme="sakura"] .sidebar-theme-decoration::before {
+    content: "🌸  🌸     🌸";
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+
+/* DARK */
+
+.sidebar[data-theme="dark"] .sidebar-theme-decoration::before {
+    content: "🕯️        🦇";
+    position: absolute;
+    bottom: 25px;
+    left: 18px;
+    font-size: 18px;
+    opacity: 0.55;
+}
+
+
+/* OCEAN */
+
+.sidebar[data-theme="ocean"] .sidebar-theme-decoration::before {
+    content: "🫧   🌊   🫧";
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    font-size: 18px;
+    opacity: 0.55;
+}
+/* ========================================= */
+/* 🎨 TEMA MENÜSÜ */
+/* ========================================= */
+
+.theme-menu {
+    margin: 10px 14px 18px;
+}
+
+
+.theme-menu summary {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: #5b2868;
+
+    transition: 0.2s ease;
+}
+
+
+/* Chrome'daki varsayılan oku kaldır */
+
+.theme-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Kendi okumuz */
+
+.theme-menu summary::after {
+    content: "⌄";
+
+    margin-left: auto;
+
+    font-size: 16px;
+
+    transition: 0.2s ease;
+}
+
+
+.theme-menu[open] summary::after {
+    transform: rotate(180deg);
+}
+
+
+.theme-menu summary:hover {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ========================================= */
+/* TEMA SEÇENEKLERİ */
+/* ========================================= */
+
+.theme-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 5px;
+
+    padding-left: 12px;
+}
+
+
+.theme-option {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    text-align: left;
+
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: inherit;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.theme-option:hover {
+    background: rgba(255, 255, 255, 0.55);
+
+    transform: translateX(3px);
+}
+
+
+/* ========================================= */
+/* SAKURA */
+/* ========================================= */
+
+.sakura-theme:hover {
+    background: #f7dceb;
+    color: #7b3d82;
+}
+
+
+/* ========================================= */
+/* DARK */
+/* ========================================= */
+
+.sidebar[data-theme="dark"] .theme-menu summary {
+    color: #d8b8ff;
+}
+
+
+.sidebar[data-theme="dark"] .theme-option {
+    color: #eee8ff;
+}
+
+
+.sidebar[data-theme="dark"] .theme-option:hover {
+    background: #302448;
+}
+
+
+/* ========================================= */
+/* OCEAN */
+/* ========================================= */
+
+.sidebar[data-theme="ocean"] .theme-menu summary {
+    color: #17627a;
+}
+
+
+.sidebar[data-theme="ocean"] .theme-option:hover {
+    background: #c9edf5;
+}
+/* ========================================= */
+/* 🌸 TEMA BUTONLARI - KÜTÜPHANE STİLİ */
+/* ========================================= */
+
+.theme-option {
+    border: none;
+    background: transparent;
+
+    color: #5b2868;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+
+    padding: 7px 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: all 0.2s ease;
+}
+
+
+.theme-option:hover {
+    transform: translateX(4px);
+}
+
+
+/* SAKURA */
+
+.sakura-theme {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.sakura-theme:hover {
+    background: #f4cddd;
+}
+
+
+/* DARK */
+
+.dark-theme {
+    background: rgba(45, 35, 55, 0.08);
+}
+
+.dark-theme:hover {
+    background: #302448;
+    color: white;
+}
+
+
+/* OCEAN */
+
+.ocean-theme {
+    background: rgba(180, 225, 235, 0.25);
+}
+
+.ocean-theme:hover {
+    background: #c9edf5;
+    color: #12647b;
+}
+}
+/* ========================================= */
+/* 🎨 TEMA BUTONLARI - SON GÖRÜNÜM */
+/* ========================================= */
+
+.theme-options .theme-option {
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: block;
+    width: 100%;
+
+    border: none !important;
+    outline: none;
+
+    background: transparent;
+
+    color: #5b2868;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+
+    text-align: left;
+
+    padding: 8px 12px;
+
+    margin: 2px 0;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Sakura */
+
+.theme-options .sakura-theme {
+    background: rgba(255, 255, 255, 0.40);
+}
+
+.theme-options .sakura-theme:hover {
+    background: rgba(244, 205, 221, 0.9);
+    transform: translateX(4px);
+}
+
+
+/* Dark */
+
+.theme-options .dark-theme {
+    background: rgba(70, 55, 80, 0.08);
+}
+
+.theme-options .dark-theme:hover {
+    background: #302448;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+
+/* Ocean */
+
+.theme-options .ocean-theme {
+    background: rgba(190, 230, 240, 0.30);
+}
+
+.theme-options .ocean-theme:hover {
+    background: #c9edf5;
+    color: #12647b;
+    transform: translateX(4px);
+}
+/* ========================================= */
+/* 🪦 DARK TEMA */
+/* ========================================= */
+
+body:has(.sidebar[data-theme="dark"]) {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(91, 64, 125, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(50, 40, 80, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #100e18 0%,
+            #171326 50%,
+            #0d0b13 100%
+        );
+
+    color: #eee8ff;
+}
+/* ========================================= */
+/* 🪦 DARK SIDEBAR */
+/* ========================================= */
+
+.sidebar[data-theme="dark"] {
+    background:
+        linear-gradient(
+            180deg,
+            #171326 0%,
+            #100e18 100%
+        );
+
+    color: #eee8ff;
+
+    border-right: 1px solid rgba(190, 150, 230, 0.15);
+
+    box-shadow:
+        8px 0 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.sidebar[data-theme="dark"] .sidebar-title {
+    color: #d9b8ff;
+}
+
+
+.sidebar[data-theme="dark"] nav a,
+.sidebar[data-theme="dark"] .sidebar-bottom a {
+    color: #eee8ff;
+}
+
+
+.sidebar[data-theme="dark"] nav a:hover,
+.sidebar[data-theme="dark"] .sidebar-bottom a:hover {
+    background: rgba(130, 90, 170, 0.20);
+
+    color: #ffffff;
+}
+/* ========================================= */
+/* 🪦 DARK DEKORASYON */
+/* ========================================= */
+
+.sidebar[data-theme="dark"] .sidebar-theme-decoration::before {
+    content: "🕯️      🦇      🕯️";
+
+    color: #bda0d8;
+
+    opacity: 0.7;
+
+    font-size: 18px;
+}
+/* ========================================= */
+/* 🪦 DARK LIBRARY WALL */
+/* ========================================= */
+
+body:has(.sidebar[data-theme="dark"]) .real-library{
+    background: transparent;
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-wall{
+
+    position:relative;
+
+    border-radius:32px;
+
+    padding:40px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(180deg,#20162d 0%,#140f20 100%);
+
+    border:1px solid rgba(170,130,255,.15);
+
+    box-shadow:
+        inset 0 0 100px rgba(120,70,180,.18),
+        0 25px 60px rgba(0,0,0,.55);
+}
+
+/* Mor ışık */
+
+body:has(.sidebar[data-theme="dark"]) .library-wall::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(170,120,255,.20), transparent 35%),
+        radial-gradient(circle at 80% 75%, rgba(90,60,170,.22), transparent 40%);
+
+    pointer-events:none;
+}
+
+/* Hafif sis */
+
+body:has(.sidebar[data-theme="dark"]) .library-wall::after{
+
+    content:"";
+
+    position:absolute;
+    left:-20%;
+    bottom:-30px;
+
+    width:140%;
+    height:140px;
+
+    background:
+        radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 70%);
+
+    filter:blur(30px);
+
+    opacity:.55;
+
+    animation:fogMove 16s ease-in-out infinite alternate;
+
+    pointer-events:none;
+}
+
+@keyframes fogMove{
+
+    from{
+        transform:translateX(-40px);
+    }
+
+    to{
+        transform:translateX(40px);
+    }
+
+}
+/* ========================================= */
+/* 🪵 DARK SHELF */
+/* ========================================= */
+
+body:has(.sidebar[data-theme="dark"]) .library-shelf{
+
+    background:
+        linear-gradient(180deg,#241829,#120d19);
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    box-shadow:
+        inset 0 0 30px rgba(255,255,255,.04),
+        0 18px 35px rgba(0,0,0,.5);
+}
+
+body:has(.sidebar[data-theme="dark"]) .shelf-board{
+
+    background:
+        linear-gradient(180deg,#5d4338,#2f1e1d);
+
+    height:22px;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.6),
+        inset 0 2px 3px rgba(255,255,255,.08);
+}
+/* ========================================= */
+/* 📚 DARK BOOKS */
+/* ========================================= */
+
+body:has(.sidebar[data-theme="dark"]) .library-book{
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.45);
+
+    filter:saturate(.85);
+}
+
+/* Hover olunca kitap biraz dışarı çıksın */
+
+body:has(.sidebar[data-theme="dark"]) .library-book:hover{
+
+    transform:
+        translateY(-16px)
+        rotate(-2deg);
+
+    box-shadow:
+        0 20px 35px rgba(138,91,255,.35);
+
+    z-index:5;
+}
+/* ========================================= */
+/* 📚 DARK BOOKS */
+/* ========================================= */
+
+body:has(.sidebar[data-theme="dark"]) .library-book{
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.45);
+
+    filter:saturate(.85);
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-book:hover{
+
+    transform:
+        translateY(-16px)
+        rotate(-2deg);
+
+    box-shadow:
+        0 20px 35px rgba(138,91,255,.35);
+
+    z-index:5;
+}
+
+
+/* ========================================= */
+/* 🌸 SAKURA'YI DARK'TA GİZLE */
+/* ========================================= */
+
+body:has(.sidebar[data-theme="dark"]) .sakura-container{
+    display:none;
+}
+/* =========================================
+   SAKURA FALLING FLOWERS
+========================================= */
+
+.library-theme-decoration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.library-theme-decoration .falling-flower {
+    position: absolute;
+    top: -60px;
+    display: block;
+    font-size: 20px;
+    opacity: 0.85;
+    animation-name: sakuraFall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Farklı başlangıç noktaları */
+.library-theme-decoration .flower-1 {
+    left: 5%;
+    animation-duration: 11s;
+    animation-delay: -2s;
+}
+
+.library-theme-decoration .flower-2 {
+    left: 17%;
+    animation-duration: 14s;
+    animation-delay: -8s;
+}
+
+.library-theme-decoration .flower-3 {
+    left: 31%;
+    animation-duration: 10s;
+    animation-delay: -4s;
+}
+
+.library-theme-decoration .flower-4 {
+    left: 46%;
+    animation-duration: 15s;
+    animation-delay: -10s;
+}
+
+.library-theme-decoration .flower-5 {
+    left: 62%;
+    animation-duration: 12s;
+    animation-delay: -6s;
+}
+
+.library-theme-decoration .flower-6 {
+    left: 75%;
+    animation-duration: 16s;
+    animation-delay: -12s;
+}
+
+.library-theme-decoration .flower-7 {
+    left: 87%;
+    animation-duration: 13s;
+    animation-delay: -3s;
+}
+
+.library-theme-decoration .flower-8 {
+    left: 96%;
+    animation-duration: 17s;
+    animation-delay: -9s;
+}
+
+@keyframes sakuraFall {
+    0% {
+        transform:
+            translate3d(0, -60px, 0)
+            rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.85;
+    }
+
+    25% {
+        transform:
+            translate3d(35px, 25vh, 0)
+            rotate(80deg);
+    }
+
+    50% {
+        transform:
+            translate3d(-25px, 50vh, 0)
+            rotate(180deg);
+    }
+
+    75% {
+        transform:
+            translate3d(40px, 75vh, 0)
+            rotate(270deg);
+    }
+
+    90% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform:
+            translate3d(-20px, 110vh, 0)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   THEME FIX — LIBRARY
+   Only theme-specific overrides. Existing CSS above is kept.
+   ========================================================= */
+
+/* Sidebar must stay fixed. The old theme block changed this to relative. */
+.sidebar {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: 50;
+}
+
+/* The old sidebar decoration is no longer used. */
+.sidebar-theme-decoration {
+    display: none !important;
+}
+
+/* ---------- SAKURA ---------- */
+body:has(.sidebar[data-theme="sakura"]) .library-page {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.55), transparent 30%),
+        radial-gradient(circle at 85% 25%, rgba(255,190,210,.35), transparent 35%),
+        radial-gradient(circle at 50% 90%, rgba(255,220,225,.40), transparent 40%),
+        linear-gradient(135deg,#efd1d9 0%,#e8c2cd 45%,#f2d6dc 100%) !important;
+    color: #3d3040;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .real-library {
+    background: rgba(255,248,250,.38) !important;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .library-wall {
+    background:
+        linear-gradient(90deg,rgba(255,255,255,.08),transparent 20%,transparent 80%,rgba(0,0,0,.08)),
+        #6d493c !important;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .library-shelf {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Sakura falling flowers */
+.sakura-container {
+    position: fixed !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+    z-index: 40 !important;
+    display: none;
+}
+
+.sakura-container span {
+    position: absolute !important;
+    top: -60px !important;
+    display: block;
+    font-size: 20px;
+    opacity: .82;
+    animation-name: sakuraFall !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .sakura-container { display:block !important; }
+body:has(.sidebar[data-theme="dark"]) .sakura-container,
+body:has(.sidebar[data-theme="ocean"]) .sakura-container { display:none !important; }
+
+/* ---------- DARK ---------- */
+body:has(.sidebar[data-theme="dark"]) .library-page {
+    background:
+        radial-gradient(circle at 20% 20%,rgba(91,64,125,.20),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(50,40,80,.25),transparent 35%),
+        linear-gradient(135deg,#100e18 0%,#171326 50%,#0d0b13 100%) !important;
+    color:#eee8ff !important;
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-page::before {
+    opacity:.10;
+    mix-blend-mode:screen;
+}
+
+body:has(.sidebar[data-theme="dark"]) .real-library {
+    background:transparent !important;
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-wall {
+    position:relative !important;
+    min-height:470px;
+    background:linear-gradient(180deg,#20162d 0%,#140f20 100%) !important;
+    border:1px solid rgba(170,130,255,.15);
+    border-radius:32px;
+    padding:40px;
+    overflow:hidden;
+    box-shadow:inset 0 0 100px rgba(120,70,180,.18),0 25px 60px rgba(0,0,0,.55);
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-wall::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 20% 15%,rgba(170,120,255,.20),transparent 35%),radial-gradient(circle at 80% 75%,rgba(90,60,170,.22),transparent 40%);
+    pointer-events:none;
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-wall::after {
+    content:"";
+    position:absolute;
+    left:-20%;
+    bottom:-30px;
+    width:140%;
+    height:140px;
+    background:radial-gradient(circle,rgba(255,255,255,.07) 0%,transparent 70%);
+    filter:blur(30px);
+    opacity:.60;
+    animation:fogMove 16s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-shelf {
+    position:relative;
+    z-index:2;
+    background:linear-gradient(180deg,#241829,#120d19) !important;
+    border-radius:22px;
+    padding:40px 30px;
+    box-shadow:inset 0 0 30px rgba(255,255,255,.04),0 18px 35px rgba(0,0,0,.5);
+}
+
+body:has(.sidebar[data-theme="dark"]) .shelf-board {
+    background:linear-gradient(180deg,#5d4338,#2f1e1d) !important;
+    height:22px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.6),inset 0 2px 3px rgba(255,255,255,.08);
+}
+
+body:has(.sidebar[data-theme="dark"]) .library-book {
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 8px 18px rgba(0,0,0,.45);
+    filter:saturate(.85);
+}
+
+/* Dark atmosphere: bats are viewport-wide and keep moving while scrolling. */
+.dark-library-decoration {
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:39;
+    display:none;
+}
+
+body:has(.sidebar[data-theme="dark"]) .dark-library-decoration { display:block; }
+
+.dark-bat {
+    position:absolute;
+    left:-80px;
+    display:block;
+    opacity:0;
+    animation-name:batFlight;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,.35));
+}
+
+.bat-1 { top:14%; font-size:20px; animation-duration:19s; }
+.bat-2 { top:29%; font-size:25px; animation-duration:24s; animation-delay:-7s; }
+.bat-3 { top:51%; font-size:18px; animation-duration:21s; animation-delay:-12s; }
+.bat-4 { top:69%; font-size:23px; animation-duration:27s; animation-delay:-18s; }
+
+@keyframes batFlight {
+    0% { transform:translate3d(-80px,0,0) scale(1) rotate(-4deg); opacity:0; }
+    8% { opacity:.62; }
+    25% { transform:translate3d(25vw,-24px,0) scale(1.05) rotate(3deg); }
+    50% { transform:translate3d(52vw,28px,0) scale(.90) rotate(-3deg); }
+    75% { transform:translate3d(78vw,-18px,0) scale(1.05) rotate(4deg); }
+    92% { opacity:.52; }
+    100% { transform:translate3d(110vw,10px,0) scale(.90) rotate(-3deg); opacity:0; }
+}
+
+@keyframes fogMove {
+    from { transform:translateX(-40px); }
+    to { transform:translateX(40px); }
+}
+
+/* RIP stones live inside the library wall, so they scroll with the page. */
+.dark-tombstones {
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+}
+
+.dark-tombstone {
+    position:absolute;
+    width:68px;
+    height:84px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+    background:linear-gradient(145deg,#3a3444 0%,#25212d 100%);
+    border:2px solid rgba(215,200,230,.16);
+    border-radius:34px 34px 7px 7px;
+    box-shadow:inset 0 0 18px rgba(0,0,0,.45),0 9px 20px rgba(0,0,0,.40);
+    opacity:.58;
+}
+
+.dark-tombstone::after {
+    content:"";
+    position:absolute;
+    left:-10px;
+    right:-10px;
+    bottom:-8px;
+    height:14px;
+    border-radius:50%;
+    background:rgba(0,0,0,.28);
+    filter:blur(5px);
+}
+
+.dark-tombstone span {
+    color:#c9bfd4;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.tombstone-1 { left:10%; bottom:28px; transform:rotate(-6deg) scale(.82); }
+.tombstone-2 { left:59%; bottom:52px; transform:rotate(5deg) scale(.68); opacity:.46; }
+.tombstone-3 { right:10%; bottom:24px; transform:rotate(-3deg) scale(.58); opacity:.38; }
+
+/* ---------- OCEAN ---------- */
+/* Ocean: only the Ocean theme gets these colors/animations. */
+body:has(.sidebar[data-theme="ocean"]) {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255,255,255,.48), transparent 28%),
+        radial-gradient(circle at 82% 25%, rgba(90,220,245,.30), transparent 34%),
+        radial-gradient(circle at 52% 88%, rgba(25,150,175,.20), transparent 42%),
+        linear-gradient(135deg, #bfeaf3 0%, #8fd3e4 48%, #68b9cf 100%) !important;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-page {
+    background:
+        radial-gradient(circle at 15% 18%, rgba(255,255,255,.55), transparent 28%),
+        radial-gradient(circle at 82% 28%, rgba(80,205,225,.24), transparent 34%),
+        radial-gradient(circle at 50% 85%, rgba(35,150,130,.18), transparent 42%),
+        linear-gradient(135deg, #bfeaf3 0%, #8fd3e4 48%, #68b9cf 100%) !important;
+    color:#164f4d !important;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-page::before {
+    opacity:.10;
+    mix-blend-mode:normal;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .real-library {
+    background:rgba(224,245,239,.24) !important;
+    box-shadow:inset 0 0 90px rgba(20,130,115,.12), 0 20px 50px rgba(20,100,90,.10);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-wall {
+    position:relative !important;
+    background:
+        linear-gradient(180deg, #6f9f79 0%, #527d60 55%, #41664e 100%) !important;
+    border:1px solid rgba(224,255,240,.42);
+    border-radius:32px;
+    padding:40px;
+    overflow:hidden;
+    box-shadow:
+        inset 0 0 90px rgba(190,240,215,.16),
+        0 25px 60px rgba(30,80,60,.24);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-wall::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(220,255,238,.18), transparent 30%),
+        radial-gradient(circle at 82% 72%, rgba(20,105,75,.20), transparent 42%);
+    pointer-events:none;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-shelf {
+    position:relative;
+    z-index:2;
+    background:rgba(220,244,232,.72) !important;
+    border-radius:22px;
+    padding:40px 30px;
+    box-shadow:
+        inset 0 0 30px rgba(255,255,255,.32),
+        0 18px 35px rgba(20,80,60,.22);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .shelf-board {
+    background:linear-gradient(180deg,#6f9b69,#3f6849) !important;
+    height:22px;
+    border-radius:12px;
+    box-shadow:
+        0 6px 18px rgba(20,70,50,.32),
+        inset 0 2px 3px rgba(255,255,255,.20);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-book {
+    box-shadow:0 8px 18px rgba(20,70,60,.25);
+}
+
+.ocean-library-decoration {
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:38;
+    display:none;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .ocean-library-decoration {
+    display:block !important;
+}
+
+.ocean-wave {
+    position:absolute;
+    left:-10%;
+    bottom:-25px;
+    width:120%;
+    height:155px;
+    border-radius:50% 50% 0 0;
+    background:linear-gradient(180deg,rgba(190,255,236,.28),rgba(35,150,125,.20));
+    filter:blur(1px);
+    opacity:.78;
+}
+
+.ocean-wave-1 { animation:oceanWave 9s ease-in-out infinite alternate; }
+.ocean-wave-2 { bottom:-45px; opacity:.42; animation:oceanWave 13s ease-in-out infinite alternate-reverse; }
+.ocean-wave-3 { bottom:-65px; opacity:.30; animation:oceanWave 17s ease-in-out infinite alternate; }
+
+@keyframes oceanWave {
+    from { transform:translateX(-4%) translateY(10px) scaleX(1.02); }
+    to { transform:translateX(4%) translateY(-16px) scaleX(1.08); }
+}
+
+.ocean-bubble {
+    position:absolute;
+    bottom:-30px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,.92);
+    background:radial-gradient(circle at 30% 25%,rgba(255,255,255,1),rgba(185,245,238,.48) 45%,rgba(50,170,150,.18));
+    box-shadow:0 0 12px rgba(255,255,255,.70), 0 0 22px rgba(75,220,190,.28);
+    animation:oceanBubble linear infinite;
+}
+
+.bubble-1 { left:18%; width:9px; height:9px; animation-duration:8s; }
+.bubble-2 { left:34%; width:14px; height:14px; animation-duration:11s; animation-delay:-4s; }
+.bubble-3 { left:51%; width:8px; height:8px; animation-duration:9s; animation-delay:-2s; }
+.bubble-4 { left:67%; width:16px; height:16px; animation-duration:13s; animation-delay:-7s; }
+.bubble-5 { left:79%; width:10px; height:10px; animation-duration:10s; animation-delay:-5s; }
+.bubble-6 { left:90%; width:7px; height:7px; animation-duration:12s; animation-delay:-8s; }
+
+@keyframes oceanBubble {
+    0% { transform:translate3d(0,0,0) scale(.75); opacity:0; }
+    10% { opacity:.90; }
+    45% { transform:translate3d(22px,-45vh,0) scale(1); opacity:.78; }
+    75% { transform:translate3d(-18px,-75vh,0) scale(.9); opacity:.58; }
+    100% { transform:translate3d(12px,-110vh,0) scale(.65); opacity:0; }
+}
+
+/* Ocean must never show Sakura or Dark decorations. */
+body:has(.sidebar[data-theme="ocean"]) .sakura-container,
+body:has(.sidebar[data-theme="ocean"]) .dark-library-decoration,
+body:has(.sidebar[data-theme="ocean"]) .dark-tombstones {
+    display:none !important;
+}
+
+body:has(.sidebar[data-theme="dark"]) .ocean-library-decoration,
+body:has(.sidebar[data-theme="sakura"]) .ocean-library-decoration {
+    display:none !important;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .library-eyebrow { color:#175f59 !important; }
+body:has(.sidebar[data-theme="ocean"]) .library-description { color:#286b65 !important; }
+
+/* Keep theme text readable */
+body:has(.sidebar[data-theme="dark"]) .library-eyebrow,
+body:has(.sidebar[data-theme="dark"]) .library-description { color:#ddd2e8 !important; }
+body:has(.sidebar[data-theme="dark"]) .library-search input { background:#f8f6fa; color:#211b2b; }
+body:has(.sidebar[data-theme="dark"]) .library-filters a { color:#2c2433; }
+body:has(.sidebar[data-theme="ocean"]) .library-eyebrow { color:#17627a; }
+body:has(.sidebar[data-theme="ocean"]) .library-description { color:#286d80; }
+
+
+
+/* Ocean outer atmosphere: blue water tones only */
+body:has(.sidebar[data-theme="ocean"]) .library-page::before {
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.72) 0 2px, transparent 3px),
+        radial-gradient(circle at 70% 20%, rgba(225,250,255,.60) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 40% 75%, rgba(40,145,175,.20) 0 2px, transparent 4px) !important;
+    mix-blend-mode: normal !important;
+}
+
+
+/* =========================================================
+   🌸🌊🪦 THEME SYSTEM — HAFTALIK PROGRAM
+   Planner için tema katmanı.
+   Mevcut planner işlevlerine dokunmaz.
+   ========================================================= */
+
+/* Sayfa temel yapısı */
+.planner-page {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.planner-page .main-content {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.planner-layout {
+    position: relative;
+}
+
+.planner-section,
+.planner-right {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   🌸 SAKURA
+   ========================================================= */
+
+.planner-sakura-decoration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 40;
+    display: none;
+}
+
+.planner-sakura-decoration span {
+    position: absolute;
+    top: -60px;
+    font-size: 20px;
+    opacity: .82;
+    animation: plannerSakuraFall linear infinite;
+}
+
+.planner-sakura-decoration span:nth-child(1) {
+    left: 7%;
+    animation-duration: 12s;
+}
+
+.planner-sakura-decoration span:nth-child(2) {
+    left: 20%;
+    animation-duration: 16s;
+    animation-delay: -4s;
+}
+
+.planner-sakura-decoration span:nth-child(3) {
+    left: 34%;
+    animation-duration: 13s;
+    animation-delay: -8s;
+}
+
+.planner-sakura-decoration span:nth-child(4) {
+    left: 48%;
+    animation-duration: 18s;
+    animation-delay: -2s;
+}
+
+.planner-sakura-decoration span:nth-child(5) {
+    left: 61%;
+    animation-duration: 14s;
+    animation-delay: -7s;
+}
+
+.planner-sakura-decoration span:nth-child(6) {
+    left: 74%;
+    animation-duration: 17s;
+    animation-delay: -11s;
+}
+
+.planner-sakura-decoration span:nth-child(7) {
+    left: 87%;
+    animation-duration: 15s;
+    animation-delay: -5s;
+}
+
+.planner-sakura-decoration span:nth-child(8) {
+    left: 96%;
+    animation-duration: 19s;
+    animation-delay: -9s;
+}
+
+@keyframes plannerSakuraFall {
+
+    0% {
+        transform:
+            translate3d(0, -60px, 0)
+            rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .82;
+    }
+
+    30% {
+        transform:
+            translate3d(35px, 30vh, 0)
+            rotate(90deg);
+    }
+
+    55% {
+        transform:
+            translate3d(-25px, 58vh, 0)
+            rotate(190deg);
+    }
+
+    80% {
+        transform:
+            translate3d(45px, 82vh, 0)
+            rotate(285deg);
+    }
+
+    100% {
+        transform:
+            translate3d(-20px, 110vh, 0)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* Sakura planner arka planı */
+body:has(.sidebar[data-theme="sakura"]) .planner-page {
+    background:
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(255,255,255,.58),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 84% 28%,
+            rgba(255,190,210,.32),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 50% 88%,
+            rgba(255,220,225,.38),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #efd1d9 0%,
+            #e8c2cd 48%,
+            #f2d6dc 100%
+        ) !important;
+
+    color: #49374a;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .planner-sakura-decoration {
+    display: block;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .day-box,
+body:has(.sidebar[data-theme="sakura"]) .calendar-section,
+body:has(.sidebar[data-theme="sakura"]) .dont-forget-section,
+body:has(.sidebar[data-theme="sakura"]) .upcoming-section {
+    background: rgba(255,248,251,.62);
+    border: 1px solid rgba(255,255,255,.62);
+    box-shadow:
+        0 16px 35px rgba(115,65,90,.10),
+        inset 0 0 25px rgba(255,255,255,.35);
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   🪦 DARK
+   ========================================================= */
+
+body:has(.sidebar[data-theme="dark"]) .planner-page {
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(91,64,125,.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 82% 72%,
+            rgba(50,40,80,.28),
+            transparent 36%
+        ),
+        linear-gradient(
+            135deg,
+            #100e18 0%,
+            #171326 52%,
+            #0d0b13 100%
+        ) !important;
+
+    color: #eee8ff !important;
+}
+
+body:has(.sidebar[data-theme="dark"]) .planner-page h1,
+body:has(.sidebar[data-theme="dark"]) .planner-page h2,
+body:has(.sidebar[data-theme="dark"]) .planner-page p,
+body:has(.sidebar[data-theme="dark"]) .planner-page strong {
+    color: #eee8ff;
+}
+
+body:has(.sidebar[data-theme="dark"]) .planner-page .day-box,
+body:has(.sidebar[data-theme="dark"]) .planner-page .calendar-section,
+body:has(.sidebar[data-theme="dark"]) .planner-page .dont-forget-section,
+body:has(.sidebar[data-theme="dark"]) .planner-page .upcoming-section {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(42,31,57,.94),
+            rgba(25,19,35,.96)
+        );
+
+    border: 1px solid rgba(190,160,220,.16);
+
+    box-shadow:
+        inset 0 0 35px rgba(150,100,200,.08),
+        0 18px 38px rgba(0,0,0,.36);
+
+    border-radius: 20px;
+}
+
+body:has(.sidebar[data-theme="dark"]) .planner-event {
+    background: rgba(255,255,255,.045);
+    border-color: rgba(210,190,230,.16);
+    border-radius: 12px;
+    color: #eee8ff;
+}
+
+body:has(.sidebar[data-theme="dark"]) .planner-event a,
+body:has(.sidebar[data-theme="dark"]) .upcoming-event a,
+body:has(.sidebar[data-theme="dark"]) .calendar-header a {
+    color: #d8bff5;
+}
+
+body:has(.sidebar[data-theme="dark"]) .calendar-day {
+    color: #eee8ff;
+    border-color: rgba(210,190,230,.16);
+    background: rgba(255,255,255,.035);
+}
+
+body:has(.sidebar[data-theme="dark"]) .calendar-day:hover {
+    background: rgba(200,170,235,.14);
+}
+
+body:has(.sidebar[data-theme="dark"]) .calendar-day.today {
+    border-color: #d5a9ef;
+    box-shadow: 0 0 12px rgba(190,130,240,.18);
+}
+
+body:has(.sidebar[data-theme="dark"]) .upcoming-event {
+    border-left-color: #b993d8;
+}
+
+body:has(.sidebar[data-theme="dark"]) .upcoming-event strong {
+    color: #d7b6ef;
+}
+
+body:has(.sidebar[data-theme="dark"]) #showReminderForm,
+body:has(.sidebar[data-theme="dark"]) #reminderForm button {
+    background: #eadcf1;
+    color: #382244;
+    border: none;
+}
+
+body:has(.sidebar[data-theme="dark"]) #reminderForm input {
+    background: #f8f6fa;
+    color: #211b2b;
+    border: 1px solid rgba(220,205,235,.35);
+}
+
+
+/* Dark atmosferi */
+.planner-dark-atmosphere {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 39;
+    display: none;
+}
+
+body:has(.sidebar[data-theme="dark"]) .planner-dark-atmosphere {
+    display: block;
+}
+
+.planner-dark-atmosphere::after {
+    content: "";
+    position: absolute;
+    left: -15%;
+    bottom: -55px;
+    width: 130%;
+    height: 190px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(225,215,235,.11),
+            rgba(225,215,235,.035) 45%,
+            transparent 75%
+        );
+
+    filter: blur(24px);
+    opacity: .72;
+
+    animation: plannerDarkMist 15s ease-in-out infinite alternate;
+}
+
+@keyframes plannerDarkMist {
+
+    from {
+        transform: translateX(-45px) scaleX(1);
+    }
+
+    to {
+        transform: translateX(45px) scaleX(1.08);
+    }
+}
+
+.planner-bat {
+    position: absolute;
+    left: -80px;
+    display: block;
+    opacity: 0;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,.35));
+    animation:
+        plannerBatFlight
+        linear
+        infinite;
+}
+
+.planner-bat-1 {
+    top: 13%;
+    font-size: 20px;
+    animation-duration: 20s;
+}
+
+.planner-bat-2 {
+    top: 30%;
+    font-size: 25px;
+    animation-duration: 25s;
+    animation-delay: -8s;
+}
+
+.planner-bat-3 {
+    top: 53%;
+    font-size: 18px;
+    animation-duration: 22s;
+    animation-delay: -13s;
+}
+
+.planner-bat-4 {
+    top: 72%;
+    font-size: 23px;
+    animation-duration: 28s;
+    animation-delay: -19s;
+}
+
+@keyframes plannerBatFlight {
+
+    0% {
+        transform:
+            translate3d(-80px,0,0)
+            scale(1)
+            rotate(-4deg);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: .62;
+    }
+
+    25% {
+        transform:
+            translate3d(25vw,-24px,0)
+            scale(1.05)
+            rotate(3deg);
+    }
+
+    50% {
+        transform:
+            translate3d(52vw,28px,0)
+            scale(.90)
+            rotate(-3deg);
+    }
+
+    75% {
+        transform:
+            translate3d(78vw,-18px,0)
+            scale(1.05)
+            rotate(4deg);
+    }
+
+    92% {
+        opacity: .52;
+    }
+
+    100% {
+        transform:
+            translate3d(110vw,10px,0)
+            scale(.90)
+            rotate(-3deg);
+        opacity: 0;
+    }
+}
+
+
+/* RIP'ler planner içeriğiyle birlikte kayar */
+.planner-scroll-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.planner-tombstone {
+    position: absolute;
+    width: 70px;
+    height: 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3a3444 0%,
+            #25212d 100%
+        );
+
+    border: 2px solid rgba(215,200,230,.16);
+    border-radius: 35px 35px 8px 8px;
+
+    box-shadow:
+        inset 0 0 18px rgba(0,0,0,.45),
+        0 10px 22px rgba(0,0,0,.40);
+
+    opacity: .55;
+}
+
+.planner-tombstone::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: -8px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.28);
+    filter: blur(5px);
+}
+
+.planner-tombstone span {
+    color: #c9bfd4;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.planner-tombstone-1 {
+    left: 8%;
+    top: 24%;
+    transform: rotate(-6deg) scale(.78);
+}
+
+.planner-tombstone-2 {
+    right: 28%;
+    top: 51%;
+    transform: rotate(5deg) scale(.65);
+    opacity: .43;
+}
+
+.planner-tombstone-3 {
+    right: 7%;
+    top: 76%;
+    transform: rotate(-3deg) scale(.58);
+    opacity: .34;
+}
+
+
+/* =========================================================
+   🌊 OCEAN
+   ========================================================= */
+
+body:has(.sidebar[data-theme="ocean"]) .planner-page {
+    background:
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(255,255,255,.50),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 82% 25%,
+            rgba(90,220,245,.28),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 50% 88%,
+            rgba(25,150,175,.18),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #bfeaf3 0%,
+            #8fd3e4 48%,
+            #68b9cf 100%
+        ) !important;
+
+    color: #164f4d !important;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .planner-page h1,
+body:has(.sidebar[data-theme="ocean"]) .planner-page h2,
+body:has(.sidebar[data-theme="ocean"]) .planner-page p,
+body:has(.sidebar[data-theme="ocean"]) .planner-page strong {
+    color: #165b63;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .planner-page .day-box,
+body:has(.sidebar[data-theme="ocean"]) .planner-page .calendar-section,
+body:has(.sidebar[data-theme="ocean"]) .planner-page .dont-forget-section,
+body:has(.sidebar[data-theme="ocean"]) .planner-page .upcoming-section {
+    background:
+        rgba(225,247,244,.68);
+
+    border: 1px solid rgba(255,255,255,.60);
+
+    box-shadow:
+        inset 0 0 30px rgba(255,255,255,.30),
+        0 18px 38px rgba(30,110,120,.12);
+
+    border-radius: 20px;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .planner-event {
+    background: rgba(255,255,255,.34);
+    border-color: rgba(60,145,155,.20);
+    border-radius: 12px;
+    color: #1b5b60;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .planner-event a,
+body:has(.sidebar[data-theme="ocean"]) .upcoming-event a,
+body:has(.sidebar[data-theme="ocean"]) .calendar-header a {
+    color: #176b78;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .calendar-day {
+    color: #195b63;
+    border-color: rgba(45,125,140,.18);
+    background: rgba(255,255,255,.30);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .calendar-day:hover {
+    background: rgba(255,255,255,.52);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .calendar-day.today {
+    border-color: #278a96;
+    box-shadow: 0 0 14px rgba(45,170,175,.20);
+}
+
+body:has(.sidebar[data-theme="ocean"]) .upcoming-event {
+    border-left-color: #319b8d;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .upcoming-event strong {
+    color: #227b72;
+}
+
+body:has(.sidebar[data-theme="ocean"]) #showReminderForm,
+body:has(.sidebar[data-theme="ocean"]) #reminderForm button {
+    background: rgba(255,255,255,.72);
+    color: #17616b;
+    border: 1px solid rgba(255,255,255,.65);
+}
+
+body:has(.sidebar[data-theme="ocean"]) #reminderForm input {
+    background: rgba(255,255,255,.78);
+    color: #174f58;
+    border: 1px solid rgba(70,150,160,.20);
+}
+
+
+/* Ocean hareketli dekorasyon */
+.planner-ocean-decoration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 38;
+    display: none;
+}
+
+body:has(.sidebar[data-theme="ocean"]) .planner-ocean-decoration {
+    display: block;
+}
+
+.planner-ocean-wave {
+    position: absolute;
+    left: -10%;
+    bottom: -25px;
+    width: 120%;
+    height: 155px;
+    border-radius: 50% 50% 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(190,255,236,.28),
+            rgba(35,150,125,.18)
+        );
+
+    filter: blur(1px);
+    opacity: .72;
+}
+
+.planner-ocean-wave-1 {
+    animation:
+        plannerOceanWave
+        9s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+.planner-ocean-wave-2 {
+    bottom: -45px;
+    opacity: .42;
+    animation:
+        plannerOceanWave
+        13s
+        ease-in-out
+        infinite
+        alternate-reverse;
+}
+
+.planner-ocean-wave-3 {
+    bottom: -65px;
+    opacity: .28;
+    animation:
+        plannerOceanWave
+        17s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes plannerOceanWave {
+
+    from {
+        transform:
+            translateX(-4%)
+            translateY(10px)
+            scaleX(1.02);
+    }
+
+    to {
+        transform:
+            translateX(4%)
+            translateY(-16px)
+            scaleX(1.08);
+    }
+}
+
+.planner-ocean-bubble {
+    position: absolute;
+    bottom: -30px;
+
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.92);
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,1),
+            rgba(185,245,238,.48) 45%,
+            rgba(50,170,150,.18)
+        );
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.70),
+        0 0 22px rgba(75,220,190,.28);
+
+    animation:
+        plannerOceanBubble
+        linear
+        infinite;
+}
+
+.planner-bubble-1 {
+    left: 16%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 8s;
+}
+
+.planner-bubble-2 {
+    left: 31%;
+    width: 14px;
+    height: 14px;
+    animation-duration: 11s;
+    animation-delay: -4s;
+}
+
+.planner-bubble-3 {
+    left: 48%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 9s;
+    animation-delay: -2s;
+}
+
+.planner-bubble-4 {
+    left: 64%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 13s;
+    animation-delay: -7s;
+}
+
+.planner-bubble-5 {
+    left: 79%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 10s;
+    animation-delay: -5s;
+}
+
+.planner-bubble-6 {
+    left: 91%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 12s;
+    animation-delay: -8s;
+}
+
+@keyframes plannerOceanBubble {
+
+    0% {
+        transform:
+            translate3d(0,0,0)
+            scale(.75);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .90;
+    }
+
+    45% {
+        transform:
+            translate3d(22px,-45vh,0)
+            scale(1);
+        opacity: .78;
+    }
+
+    75% {
+        transform:
+            translate3d(-18px,-75vh,0)
+            scale(.9);
+        opacity: .58;
+    }
+
+    100% {
+        transform:
+            translate3d(12px,-110vh,0)
+            scale(.65);
+        opacity: 0;
+    }
+}
+
+
+/* Temalar birbirine karışmasın */
+body:has(.sidebar[data-theme="dark"]) .planner-sakura-decoration,
+body:has(.sidebar[data-theme="ocean"]) .planner-sakura-decoration {
+    display: none !important;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .planner-dark-atmosphere,
+body:has(.sidebar[data-theme="ocean"]) .planner-dark-atmosphere {
+    display: none !important;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .planner-ocean-decoration,
+body:has(.sidebar[data-theme="dark"]) .planner-ocean-decoration {
+    display: none !important;
+}
+
+body:has(.sidebar[data-theme="sakura"]) .planner-scroll-decoration,
+body:has(.sidebar[data-theme="ocean"]) .planner-scroll-decoration {
+    display: none !important;
+}
+
+body:has(.sidebar[data-theme="dark"]) .planner-scroll-decoration {
+    display: block;
+}
+/* =========================================
+   🌸 SAKURA - TÜM ÖĞRENCİ PANELİ
+   ========================================= */
+
+body:has(.sidebar[data-theme="sakura"]) {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 255, 255, 0.60),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(255, 190, 210, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255, 220, 225, 0.40),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #efd1d9 0%,
+            #e8c2cd 45%,
+            #f2d6dc 100%
+        );
+
+    color: #49374a;
+}
+
+
+/* Ana içerik alanı */
+body:has(.sidebar[data-theme="sakura"]) .main-content {
+    background: transparent;
+}
+
+
+/* 🌸 Sakura sayfalarında beyaz ana arka planı kaldır */
+body:has(.sidebar[data-theme="sakura"]) .dashboard-page,
+body:has(.sidebar[data-theme="sakura"]) .profile-page,
+body:has(.sidebar[data-theme="sakura"]) .chatbot-page,
+body:has(.sidebar[data-theme="sakura"]) .planner-page {
+    background: transparent;
+}
+/* =========================================================
+   🏠 DASHBOARD
+   ========================================================= */
+
+.dashboard-page {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.dashboard-main {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+
+/* =========================
+   KARŞILAMA
+   ========================= */
+
+.dashboard-welcome {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 240px;
+
+    padding: 42px 48px;
+    margin-bottom: 38px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.45);
+
+    border: 1px solid rgba(255,255,255,.60);
+
+    box-shadow:
+        0 20px 45px rgba(80,60,100,.10),
+        inset 0 0 35px rgba(255,255,255,.28);
+
+    overflow: hidden;
+}
+
+
+.dashboard-welcome-text {
+    max-width: 720px;
+}
+
+
+.dashboard-eyebrow {
+    margin: 0 0 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    opacity: .72;
+}
+
+
+.dashboard-welcome h1 {
+    margin: 0 0 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1.05;
+}
+
+
+.dashboard-welcome-description {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    opacity: .78;
+}
+
+
+.dashboard-welcome-icon {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 145px;
+    height: 145px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    font-size: 68px;
+
+    background:
+        rgba(255,255,255,.50);
+
+    box-shadow:
+        0 15px 35px rgba(70,60,90,.12);
+
+    transform: rotate(3deg);
+}
+
+
+/* =========================
+   SECTION
+   ========================= */
+
+.dashboard-section {
+    position: relative;
+
+    margin-bottom: 40px;
+}
+
+
+.dashboard-section-heading {
+    margin-bottom: 20px;
+}
+
+
+.dashboard-section-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   HIZLI ERİŞİM
+   ========================= */
+
+.dashboard-quick-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.dashboard-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 150px;
+
+    padding: 25px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255,255,255,.55);
+
+    background:
+        rgba(255,255,255,.52);
+
+    box-shadow:
+        0 15px 30px rgba(70,60,90,.08);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.dashboard-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 22px 40px rgba(70,60,90,.15);
+
+}
+
+
+.dashboard-card-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    font-size: 31px;
+
+    background:
+        rgba(255,255,255,.65);
+}
+
+
+.dashboard-card-content {
+
+    padding-right: 25px;
+}
+
+
+.dashboard-card h3 {
+
+    margin: 0 0 7px;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+}
+
+
+.dashboard-card p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    opacity: .70;
+}
+
+
+.dashboard-card-arrow {
+
+    position: absolute;
+
+    right: 22px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 24px;
+
+    opacity: .55;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.dashboard-card:hover .dashboard-card-arrow {
+
+    transform:
+        translate(5px, -50%);
+
+}
+
+
+/* =========================
+   BUGÜN
+   ========================= */
+
+.dashboard-today-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.dashboard-today-card {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.38);
+
+    border: 1px solid rgba(255,255,255,.48);
+
+}
+
+
+.dashboard-today-icon {
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+
+.dashboard-today-card h3 {
+
+    margin: 0 0 6px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+}
+
+
+.dashboard-today-card p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    opacity: .68;
+}
+
+
+/* =========================================================
+   🌸 SAKURA
+   ========================================================= */
+
+.dashboard-sakura-decoration {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 3;
+
+    display: none;
+}
+
+
+.dashboard-sakura-decoration span {
+
+    position: absolute;
+
+    top: -60px;
+
+    font-size: 20px;
+
+    opacity: .82;
+
+    animation:
+        dashboardSakuraFall
+        linear
+        infinite;
+}
+
+
+.dashboard-sakura-decoration span:nth-child(1) {
+    left: 8%;
+    animation-duration: 12s;
+}
+
+.dashboard-sakura-decoration span:nth-child(2) {
+    left: 21%;
+    animation-duration: 16s;
+    animation-delay: -4s;
+}
+
+.dashboard-sakura-decoration span:nth-child(3) {
+    left: 35%;
+    animation-duration: 13s;
+    animation-delay: -8s;
+}
+
+.dashboard-sakura-decoration span:nth-child(4) {
+    left: 49%;
+    animation-duration: 18s;
+    animation-delay: -2s;
+}
+
+.dashboard-sakura-decoration span:nth-child(5) {
+    left: 62%;
+    animation-duration: 14s;
+    animation-delay: -7s;
+}
+
+.dashboard-sakura-decoration span:nth-child(6) {
+    left: 75%;
+    animation-duration: 17s;
+    animation-delay: -11s;
+}
+
+.dashboard-sakura-decoration span:nth-child(7) {
+    left: 87%;
+    animation-duration: 15s;
+    animation-delay: -5s;
+}
+
+.dashboard-sakura-decoration span:nth-child(8) {
+    left: 96%;
+    animation-duration: 19s;
+    animation-delay: -9s;
+}
+
+
+@keyframes dashboardSakuraFall {
+
+    0% {
+        transform:
+            translate3d(0,-60px,0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .82;
+    }
+
+    50% {
+        transform:
+            translate3d(55px,55vh,0)
+            rotate(180deg);
+    }
+
+    100% {
+        transform:
+            translate3d(-35px,110vh,0)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   🪦 DARK
+   ========================================================= */
+
+.dashboard-dark-decoration {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 3;
+
+    display: none;
+}
+
+
+.dashboard-bat {
+
+    position: absolute;
+
+    left: -80px;
+
+    opacity: 0;
+
+    animation:
+        dashboardBatFlight
+        linear
+        infinite;
+}
+
+
+.dashboard-bat-1 {
+    top: 15%;
+    font-size: 21px;
+    animation-duration: 19s;
+}
+
+.dashboard-bat-2 {
+    top: 32%;
+    font-size: 26px;
+    animation-duration: 24s;
+    animation-delay: -7s;
+}
+
+.dashboard-bat-3 {
+    top: 55%;
+    font-size: 19px;
+    animation-duration: 21s;
+    animation-delay: -12s;
+}
+
+.dashboard-bat-4 {
+    top: 72%;
+    font-size: 23px;
+    animation-duration: 27s;
+    animation-delay: -18s;
+}
+
+
+@keyframes dashboardBatFlight {
+
+    0% {
+        transform:
+            translate3d(-80px,0,0)
+            scale(1)
+            rotate(-4deg);
+
+        opacity: 0;
+    }
+
+    8% {
+        opacity: .62;
+    }
+
+    25% {
+        transform:
+            translate3d(25vw,-24px,0)
+            scale(1.05)
+            rotate(3deg);
+    }
+
+    50% {
+        transform:
+            translate3d(52vw,28px,0)
+            scale(.90)
+            rotate(-3deg);
+    }
+
+    75% {
+        transform:
+            translate3d(78vw,-18px,0)
+            scale(1.05)
+            rotate(4deg);
+    }
+
+    100% {
+        transform:
+            translate3d(110vw,10px,0)
+            scale(.90)
+            rotate(-3deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* Dark dashboard */
+body:has(.sidebar[data-theme="dark"]) .dashboard-welcome,
+body:has(.sidebar[data-theme="dark"]) .dashboard-card,
+body:has(.sidebar[data-theme="dark"]) .dashboard-today-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(42,31,57,.92),
+            rgba(25,19,35,.96)
+        );
+
+    border-color:
+        rgba(190,160,220,.16);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.30);
+}
+
+
+body:has(.sidebar[data-theme="dark"]) .dashboard-welcome-icon,
+body:has(.sidebar[data-theme="dark"]) .dashboard-card-icon {
+
+    background:
+        rgba(255,255,255,.07);
+}
+
+
+body:has(.sidebar[data-theme="dark"]) .dashboard-page {
+
+    color: #eee8ff;
+}
+
+
+/* =========================================================
+   🌊 OCEAN
+   ========================================================= */
+
+.dashboard-ocean-decoration {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 3;
+
+    display: none;
+}
+
+
+.dashboard-ocean-wave {
+
+    position: absolute;
+
+    left: -10%;
+
+    bottom: -45px;
+
+    width: 120%;
+
+    height: 150px;
+
+    border-radius:
+        50% 50% 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(190,255,236,.28),
+            rgba(35,150,125,.16)
+        );
+
+    opacity: .65;
+
+    animation:
+        dashboardOceanWave
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+.dashboard-ocean-wave.wave-1 {
+
+    animation-duration: 9s;
+
+}
+
+
+.dashboard-ocean-wave.wave-2 {
+
+    bottom: -65px;
+
+    opacity: .38;
+
+    animation-duration: 14s;
+
+    animation-direction:
+        alternate-reverse;
+}
+
+
+@keyframes dashboardOceanWave {
+
+    from {
+        transform:
+            translateX(-4%)
+            translateY(10px)
+            scaleX(1.02);
+    }
+
+    to {
+        transform:
+            translateX(4%)
+            translateY(-16px)
+            scaleX(1.08);
+    }
+}
+
+
+.dashboard-bubble {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid
+        rgba(255,255,255,.92);
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,1),
+            rgba(185,245,238,.48) 45%,
+            rgba(50,170,150,.18)
+        );
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.70),
+        0 0 22px rgba(75,220,190,.28);
+
+    animation:
+        dashboardBubble
+        linear
+        infinite;
+}
+
+
+.dashboard-bubble.bubble-1 {
+    left: 15%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 8s;
+}
+
+.dashboard-bubble.bubble-2 {
+    left: 30%;
+    width: 14px;
+    height: 14px;
+    animation-duration: 11s;
+    animation-delay: -4s;
+}
+
+.dashboard-bubble.bubble-3 {
+    left: 47%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 9s;
+    animation-delay: -2s;
+}
+
+.dashboard-bubble.bubble-4 {
+    left: 64%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 13s;
+    animation-delay: -7s;
+}
+
+.dashboard-bubble.bubble-5 {
+    left: 79%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 10s;
+    animation-delay: -5s;
+}
+
+.dashboard-bubble.bubble-6 {
+    left: 91%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 12s;
+    animation-delay: -8s;
+}
+
+
+@keyframes dashboardBubble {
+
+    0% {
+        transform:
+            translate3d(0,0,0)
+            scale(.75);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .90;
+    }
+
+    50% {
+        transform:
+            translate3d(22px,-55vh,0)
+            scale(1);
+
+        opacity: .78;
+    }
+
+    100% {
+        transform:
+            translate3d(-12px,-110vh,0)
+            scale(.65);
+
+        opacity: 0;
+    }
+}
+
+
+/* Ocean dashboard */
+body:has(.sidebar[data-theme="ocean"]) .dashboard-page {
+
+    color: #185b61;
+}
+
+
+body:has(.sidebar[data-theme="ocean"]) .dashboard-welcome,
+body:has(.sidebar[data-theme="ocean"]) .dashboard-card,
+body:has(.sidebar[data-theme="ocean"]) .dashboard-today-card {
+
+    background:
+        rgba(225,247,244,.62);
+
+    border-color:
+        rgba(255,255,255,.62);
+
+    box-shadow:
+        0 18px 38px rgba(30,110,120,.12),
+        inset 0 0 25px rgba(255,255,255,.25);
+}
+
+
+body:has(.sidebar[data-theme="ocean"]) .dashboard-welcome-icon,
+body:has(.sidebar[data-theme="ocean"]) .dashboard-card-icon {
+
+    background:
+        rgba(255,255,255,.55);
+}
+
+
+/* =========================================================
+   🌸 SAKURA DASHBOARD
+   ========================================================= */
+
+body:has(.sidebar[data-theme="sakura"]) .dashboard-page {
+
+    color: #49374a;
+}
+
+
+body:has(.sidebar[data-theme="sakura"]) .dashboard-welcome,
+body:has(.sidebar[data-theme="sakura"]) .dashboard-card,
+body:has(.sidebar[data-theme="sakura"]) .dashboard-today-card {
+
+    background:
+        rgba(255,248,251,.52);
+
+    border-color:
+        rgba(255,255,255,.62);
+
+    box-shadow:
+        0 18px 38px rgba(115,65,90,.10),
+        inset 0 0 25px rgba(255,255,255,.30);
+}
+
+
+/* =========================================================
+   MOBİL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-quick-grid,
+    .dashboard-today-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dashboard-welcome {
+
+        padding: 32px;
+
+    }
+
+
+    .dashboard-welcome-icon {
+
+        width: 105px;
+        height: 105px;
+
+        font-size: 48px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-welcome {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+
+    .dashboard-welcome h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .dashboard-welcome-description {
+
+        font-size: 16px;
+
+    }
+
+}
+/* =========================================================
+   🪦 DARK CHATBOT - OKUNABİLİR MESAJLAR
+   ========================================================= */
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-page {
+    color: #eee8ff;
+}
+
+
+/* Chatbot başlığı */
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-header {
+    border-bottom-color: rgba(220, 200, 240, 0.18);
+}
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-header h1 {
+    color: #f2eaff;
+}
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-header p {
+    color: #cfc1dc;
+}
+
+
+/* Bot mesajı */
+
+body:has(.sidebar[data-theme="dark"]) .bot-message .message-content {
+    background:
+        linear-gradient(
+            145deg,
+            #292039 0%,
+            #21192e 100%
+        );
+
+    color: #eee8ff;
+
+    border:
+        1px solid rgba(190, 160, 220, 0.16);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Bot ismi */
+
+body:has(.sidebar[data-theme="dark"]) .bot-message .message-content strong {
+    color: #e4cfff;
+}
+
+
+/* Bot mesaj yazısı */
+
+body:has(.sidebar[data-theme="dark"]) .bot-message .message-content p {
+    color: #eee8ff;
+}
+
+
+/* Kullanıcı mesajı */
+
+body:has(.sidebar[data-theme="dark"]) .user-message .message-content {
+    background:
+        linear-gradient(
+            145deg,
+            #dfe8ff 0%,
+            #cddcff 100%
+        );
+
+    color: #272039;
+
+    border:
+        1px solid rgba(220, 225, 255, 0.35);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Kullanıcı ismi */
+
+body:has(.sidebar[data-theme="dark"]) .user-message .message-content strong {
+    color: #3c2855;
+}
+
+
+/* Kullanıcı mesaj yazısı */
+
+body:has(.sidebar[data-theme="dark"]) .user-message .message-content p {
+    color: #272039;
+}
+
+
+/* Kullanıcı avatarı */
+
+body:has(.sidebar[data-theme="dark"]) .user-message .message-avatar {
+    color: #c7a8e8;
+}
+
+
+/* Bot avatarı */
+
+body:has(.sidebar[data-theme="dark"]) .bot-message .message-avatar {
+    color: #d8b7ff;
+}
+
+
+/* Mesaj alanının çizgileri */
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-input-area {
+    border-top-color: rgba(220, 200, 240, 0.18);
+}
+
+
+/* Mesaj yazma kutusu */
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-input-area input {
+    background: #f7f4fa;
+    color: #241b2e;
+
+    border-color:
+        rgba(210, 190, 225, 0.35);
+}
+
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-input-area input::placeholder {
+    color: #756b80;
+}
+
+
+/* Gönder butonu */
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-input-area button {
+    background: #e6d5f1;
+    color: #392044;
+}
+
+
+body:has(.sidebar[data-theme="dark"]) .chatbot-input-area button:hover {
+    background: #d5bde7;
+}

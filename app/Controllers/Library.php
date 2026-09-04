@@ -275,4 +275,66 @@ class Library extends BaseController
             'student/library_add'
         );
     }
+    public function updateBook()
+{
+    $studentId = session()->get('user_id');
+
+    if (!$studentId) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Oturum bulunamadı.'
+        ]);
+    }
+
+    $studentBookId = $this->request->getPost('student_book_id');
+    $currentPage = $this->request->getPost('current_page');
+    $status = $this->request->getPost('status');
+    $isFavorite = $this->request->getPost('is_favorite') ? 1 : 0;
+
+    if (!$studentBookId) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Kitap bulunamadı.'
+        ]);
+    }
+
+    if (!is_numeric($currentPage) || (int) $currentPage < 0) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Sayfa numarası geçersiz.'
+        ]);
+    }
+
+    if (!in_array($status, ['reading', 'completed'])) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Kitap durumu geçersiz.'
+        ]);
+    }
+
+    $studentBookModel = new StudentBookModel();
+
+    $book = $studentBookModel
+        ->where('id', $studentBookId)
+        ->where('student_id', $studentId)
+        ->first();
+
+    if (!$book) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Bu kitap size ait değil.'
+        ]);
+    }
+
+    $studentBookModel->update($studentBookId, [
+        'current_page' => (int) $currentPage,
+        'status' => $status,
+        'is_favorite' => $isFavorite
+    ]);
+
+    return $this->response->setJSON([
+        'success' => true,
+        'message' => 'Kitap bilgileri güncellendi.'
+    ]);
+}
 }
